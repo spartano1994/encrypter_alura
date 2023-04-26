@@ -40,16 +40,10 @@ function decrypt( text ){
         text = replaceAll(text , String(dictionary[i]),String(vowels[i]))
     }
     return text;
-
 }
 
-//let text = prompt( "Escriba el texto que desea encriptar" );
+let text = prompt( "Escriba el texto que desea encriptar" );
 
-//document.write( encrypt( text ) );
+document.write( encrypt( text ) );
 
-//console.log( replaceAll( "este es el este del este" , "este" , "alo" ) )
- 
-//texto = "hola a todos mis amigos"
-//console.log( encrypt( texto ) )
 
-console.log( decrypt( "hoberlai ai toberdobers mimess aimimesgobers" ) )

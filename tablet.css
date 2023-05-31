@@ -1,0 +1,31 @@
+
+.caja-botones {
+    display: block;
+}
+
+.advertencia {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.advertencia .imagen-advertencia {
+    vertical-align: bottom;
+}
+
+.boton-encriptar {
+    width: 47%;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.boton {
+    width: 47%;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.caja-botones-inferior .boton {
+    width: 100%;
+    margin-left: 0px;
+} 

@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #F3F5FC;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.contenedor-principal {
+    height: auto;
+    background: #F3F5FC;
+}
+
+/*------------------------------------------------------------------*/
+
+header {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    background: #F3F5FC;
+}
+
+.logo-alura {
+    position: relative;
+    left: -30px;
+    top: 20px;
+}
+
+/*----------------------------------------------------------------------*/
+
+.caja-encriptador {
+    box-sizing: border-box;
+    display: block;
+    margin: 0vw 3vw;
+    width: 94vw;
+    height: auto;
+    margin-bottom: 3rem;
+    background: #F3F5FC;
+}
+
+.area-encriptar {
+    width: 100%;
+    height: 400px;
+    resize: none;
+    border: 0px;
+    margin-top: 100px;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F3F5FC;
+}
+
+.area-encriptar::placeholder {
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-size: 3rem;
+}
+
+.caja-botones {
+    box-sizing: border-box;
+    height: auto;
+    padding: 2px 0px;
+    margin: 0;
+    display: block;
+    background: #F3F5FC;
+    z-index: 1;
+}
+
+.advertencia {
+    display: flex;
+    align-items: center;
+    color: #495057;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.imagen-advertencia {
+    margin-right: 5px;
+}
+
+.boton-encriptar {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 3vh 2vh;
+    margin: 1.5vh 0vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    border: 1px solid #082b57;
+    align-self: center;
+    color: white;
+    background: #0A3871;
+    border-radius: 24px;
+    transition: 0.5s background;
+    cursor: pointer;
+}
+
+.boton-encriptar:hover {
+    background: #082b57;
+}
+
+.boton-encriptar:active {
+    border: 2px solid #082b57;
+}
+
+.boton {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 3vh 2vh;
+    margin: 1.5vh 0vw;
+    border: 1px solid #082b57;
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #082b57;
+    background: #F3F5FC;
+    border-radius: 24px;
+    transition: 0.5s background;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #D8DFE8;
+}
+
+.boton:active {
+    border: 2px solid #082b57;
+}
+
+/*------------------------------------------------------------------------*/
+
+.caja-desencriptar {
+    box-sizing: border-box;
+    margin: 0vw 3vw;
+    width: 94vw;
+    height: auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.area-desencriptar {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    resize: none;
+    border: 0px;
+    padding: 2rem;
+    border-radius: 24px;
+    background: white;
+    color: #495057;
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.contenedor-muneco {
+    display: none;
+}
+
+.mensaje-no-encontrado {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 3rem 0px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 24px;
+}
+
+.mensaje-no-encontrado-superior {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #343A40;
+    text-align: center;
+    background: white;
+}
+
+.mensaje-no-encontrado-superior p , .mensaje-no-encontrado-superior b {
+    background: white;
+}
+
+.mensaje-no-encontrado-inferior {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #343A40;
+    text-align: center;
+    background: white;
+}
+
+.caja-botones-inferior {
+    display: none;
+    box-sizing: border-box;
+    background: white;
+    padding: 2rem;
+}
+
+.caja-botones-inferior button {
+    background: white;
+}
+
+/*-------------------------------------------------------------------------*/
+.pie-de-pagina {
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 17px;
+    width: 100%;
+    margin-top: 10px;
+    background: #0A3871;
+    color: white;
+    width: 100%;
+    height: 20%;
+}
+
+.copyright {
+    
+    background: inherit;
+}
+
+.redes-sociales-contenedor {
+    height: 25px;
+    background: inherit;
+}
+
+.redes-sociales-contenedor a {
+    height: 100%;
+    background: inherit;
+}
+
+.redes-sociales-contenedor a img {
+    height: 100%;
+    border-radius: 12px;
+    background: inherit;
+    border: 1px solid black;
+}

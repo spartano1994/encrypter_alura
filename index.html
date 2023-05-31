@@ -4,40 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
+    <title>Encriptador Alura Challenge</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-width: 1024px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Encriptador</h1>
 
-    <!-- <main>
-        <label for="input_encriptar">
-            <input id="input_encriptar" placeholder="Escriba el texto a encriptar"/>
-            <button id="boton_encriptar">encriptar</button>
-            <button id="boton_desencriptar" >desencriptar</button>
-        </label>
-        <label for="input_desencriptar">
-            <input id="input_desencriptar" placeholder="Escriba el texto a desencriptar"/>
-            
-        </label>
-        <script src="./script.js"></script>
-    </main> -->
+<body>
+    <header>
+        <picture class="logo-alura">
+            <a href="https://www.aluracursos.com/"><img src="./images/Logo.png" alt="logo de Alura"></a>
+        </picture>
+    </header>
 
     <main>
-        <label for="input_encriptar">
-            <textarea name="" id="input_encriptar" cols="30" rows="10" placeholder="Escriba el texto a encriptar"></textarea>
-        </label>
-        <label for="input_encriptar">
-            <button id="boton_encriptar">encriptar</button>
-            <button id="boton_desencriptar" >desencriptar</button>
-        </label>
-        <label for="input_desencriptar">
-            <textarea name="" id="input_desencriptar" cols="30" rows="10" placeholder="Escriba el texto a encriptar"></textarea>
-            
-        </label>
+        <div class="contenedor-principal">
+
+            <div class="caja-encriptador">
+
+                <textarea class="area-encriptar" name="" id="encrypt-area" placeholder="Ingrese el texto aquí"></textarea>
+
+                <div class="caja-botones">
+
+                    <p class="advertencia"><img src="./images/advertencia.png" alt="" class="imagen-advertencia">  Solo letras minúsculas y sin acento</p>
+                    <button class="boton-encriptar" id="encrypt-button">Encriptar</button>
+                    <button class="boton" id="decrypt-button">Desencriptar</button>
+
+                </div>
+            </div>
+
+            <div class="caja-desencriptar">
+                <textarea class="area-desencriptar" name="" id="decrypt-area"></textarea>
+                
+                <div id="doll-container" class="contenedor-muneco">
+                    <img src="./images/muneco.png" alt="">
+                </div>
+
+                <div id="message-not-found" class="mensaje-no-encontrado">
+                    <p class="mensaje-no-encontrado-superior"> <b>Ningún mensaje fue <br> encontrado</b> </p> 
+                    <p class="mensaje-no-encontrado-inferior">Ingresa el texto que deseas <br> encriptar o desencriptar</p>
+                </div>
+                
+                <div class="caja-botones-inferior" id="lower-button-box">
+                    <button id="copy-button" class="boton">Copiar</button>
+                </div>
+
+            </div>
+
+        </div>
+
         <script src="./script.js"></script>
     </main>
     
-    
+    <footer  class="pie-de-pagina">
+        
+        <p class="copyright">&#169 2023 Gerardo González García - Challenge Oracle One - G5</p>
+        
+        <div class="redes-sociales-contenedor">
+            <a href="https://github.com/spartano1994"><img src="./images/github.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/spartano1994/"><img src="./images/linkedIn.icono.png" alt=""></a>
+            <a href="https://twitter.com/spartano19941"><img src="./images/Twitter-icono.png" alt=""></a>
+        </div>
+        
+    </footer>
+
     
 </body>
 </html>

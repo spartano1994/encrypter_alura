@@ -1,7 +1,13 @@
-let entrada = document.querySelector( "#input_encriptar" );
-let boton_entrada = document.querySelector( "#boton_encriptar" )
-let salida = document.querySelector( "#input_desencriptar" );
-let boton_salida = document.querySelector( "#boton_desencriptar" )
+let entrada = document.querySelector( "#encrypt-area" );
+let boton_entrada = document.querySelector( "#encrypt-button" );
+let salida = document.querySelector( "#decrypt-area" );
+let boton_salida = document.querySelector( "#decrypt-button" );
+let boton_copiar = document.querySelector( "#copy-button" );
+
+var message_not_found = document.getElementById("message-not-found");
+var decrypt_area = document.getElementById( "decrypt-area" );
+var lower_button_box = document.getElementById( "lower-button-box" );
+var doll_container = document.getElementById( "doll-container" );
 
 function isVowel( letter ){
     vowels = [ "a" , "e" , "i" , "o" , "u" ];
@@ -29,7 +35,16 @@ function encrypt(){
         }
     }
     entrada.value = "";
-    salida.value = newText;
+
+    if ( ( text != "") && ( text === text.toLowerCase() ) && !( with_accents( text ) ) ) {
+        message_not_found.style.display = "none";
+        decrypt_area.style.display = "block";
+        lower_button_box.style.display = "block";
+        doll_container.style.display = "none";
+        salida.value = newText;
+    }
+
+
 }
 
 function replaceAll( texto , old_word , new_word ){
@@ -38,6 +53,25 @@ function replaceAll( texto , old_word , new_word ){
     }
     return texto;
 }
+
+function with_accents( text ){
+    let vowels_accents = [ "á" , "é" , "í" , "ó" , "ú" , 
+                            "ä", "ë" , "ï" , "ö" , "ü" ,
+                            "à", "è" , "ì" , "ò" , "ù" ,
+                            "â" , "ê" , "î" , "ô" , "û" ]
+    
+    for (letter of text){
+        for (element of vowels_accents){
+            if (letter === element){
+                return true;
+            }
+        }
+    }
+
+    return false;
+
+}
+
 
 function decrypt(){
     let text = String( entrada.value );
@@ -48,8 +82,23 @@ function decrypt(){
         text = replaceAll(text , String(dictionary[i]),String(vowels[i]));
     }
     entrada.value = "";
-    salida.value = text;
+
+    if ( ( text != "") && ( text === text.toLowerCase() ) && !( with_accents( text ) ) ) {
+        message_not_found.style.display = "none";
+        decrypt_area.style.display = "block";
+        lower_button_box.style.display = "block";
+        doll_container.style.display = "none";
+        salida.value = text;
+    }
+    
+}
+
+function copy() {
+    salida.select();
+    document.execCommand("copy");
+    salida.value = "";
 }
 
 boton_entrada.onclick = encrypt;
 boton_salida.onclick = decrypt;
+boton_copiar.onclick = copy;

@@ -1,0 +1,82 @@
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.logo-alura {
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+
+.caja-encriptador {
+    width: 55%;
+    margin-left: 15%;
+}
+
+/*----------------------------------------------------------------------*/
+
+.boton {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+
+.caja-encriptador .caja-botones {
+    position: relative;
+    bottom: 0px;
+}
+
+.caja-encriptador .caja-botones .boton-encriptar {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+
+/*-------------------------------------------------------------*/
+
+.caja-desencriptar {
+    width: 25%;
+    position: relative;
+    left: 0px;
+    margin-right: 3%;
+}
+
+.area-desencriptar {
+    height: 500px;
+}
+
+.contenedor-muneco {
+    display: block;
+    position: relative;
+    width: 80%;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contenedor-muneco img {
+    width: 100%;
+    background-color: white;
+}
+
+.caja-botones-inferior {
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
+}
+
+/*------------------------------------------------------------------*/
+
+
+.pie-de-pagina {
+    box-sizing: border-box;
+    color: white;
+    background: #082b57;
+    width: 100%;
+}

@@ -50,6 +50,7 @@ header {
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     background: #F3F5FC;
+    text-transform: lowercase;
 }
 
 .area-encriptar::placeholder {
@@ -149,8 +150,11 @@ header {
 .area-desencriptar {
     display: none;
     box-sizing: border-box;
-    width: 100%;
     height: 300px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     resize: none;
     border: none;
     padding: 2rem;
@@ -159,6 +163,10 @@ header {
     color: #495057;
     font-size: 3rem;
     font-family: 'Inter', sans-serif;
+}
+
+.area-desencriptar:focus {
+    outline: none;
 }
 
 .contenedor-muneco {
@@ -200,7 +208,7 @@ header {
 .caja-botones-inferior {
     display: none;
     box-sizing: border-box;
-    background: white;
+    background: none;
     padding: 2rem;
 }
 

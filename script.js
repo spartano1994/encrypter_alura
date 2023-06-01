@@ -24,6 +24,8 @@ function encrypt(){
     let newText = "";
     let dictionary = [ "ai", "enter", "imes" , "ober"  , "ufat" ] ;
 
+    text = text.toLowerCase();
+
     for ( letter of text ){
         let isVowelBool = isVowel( letter )[0];
         let index = isVowel( letter )[1];
@@ -36,7 +38,7 @@ function encrypt(){
     }
     entrada.value = "";
 
-    if ( ( text != "") && ( text === text.toLowerCase() ) && !( with_accents( text ) ) ) {
+    if ( ( text != "") && !( with_accents( text ) ) ) {
         message_not_found.style.display = "none";
         decrypt_area.style.display = "block";
         lower_button_box.style.display = "block";
@@ -44,6 +46,9 @@ function encrypt(){
         salida.value = newText;
     }
 
+    if (with_accents( text )) {
+        alert("El texto no puede contener acentos.")
+    } 
 
 }
 
@@ -83,14 +88,17 @@ function decrypt(){
     }
     entrada.value = "";
 
-    if ( ( text != "") && ( text === text.toLowerCase() ) && !( with_accents( text ) ) ) {
+    if ( ( text != "") && !( with_accents( text ) ) ) {
         message_not_found.style.display = "none";
         decrypt_area.style.display = "block";
         lower_button_box.style.display = "block";
         doll_container.style.display = "none";
         salida.value = text;
     }
-    
+
+    if (with_accents( text )) {
+        alert("El texto no puede contener acentos.")
+    } 
 }
 
 function copy() {
